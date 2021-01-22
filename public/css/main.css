@@ -1,0 +1,82 @@
+.logo {
+    color: rgba(140,56,56,1);
+    font-family: B612;
+    font-size: 45px;
+    text-align: left;
+    position: absolute;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+}
+
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #cbb7d8;
+    color: white;
+  }
+
+
+  .background {
+    width: 100%;
+    height: 1080px;
+    background: rgba(255,192,203,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .cake {
+    width: 475px;
+    height: 427px;
+    background: url("../images/v4_2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 159px;
+    left: 14px;
+    overflow: hidden;
+  }
+  .name {
+    margin: auto;
+    width: 673px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 195px;
+    left: 500px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 96px;
+    opacity: 1;
+    text-align: left;
+  }
+  .text {
+    width: 948px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 329px;
+    left: 420px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }

@@ -1,0 +1,45 @@
+<%- include("./partials/header") %>
+<div class="background">
+
+<div class="container mt-5">
+    <a href="/home" class="btn btn-primary mb-5">Go Back</a>
+    <h1>Product Details:</h1>
+    <form action="/cart" method="POST" enctype='application/json'>
+        <div class="form-group">
+
+            <div class="container">
+                <div class="card">
+                    <div class="container-fliud">
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                                
+                                <div class="preview-pic tab-content">
+                                  <div class="tab-pane active" id="pic-1"><img src="<%=cart.image%>" /></div>
+                                </div>
+                            </div>
+                            <div class="details col-md-6">
+                                <h3 class="product-title"><%= cart.title %></h3>
+                                <input type="hidden" name="title" value = "<%= cart.title %>" id="title">
+                                <input type="hidden" name="_id" value = "<%= cart._id %>" id="title">
+
+                                <input type="hidden" name="productId" value = "<%= cart._id %>" id="productId">
+                                <input type="hidden" name="price" value = "<%= cart.price %>" id="title">
+                                <h4 class="price">Current Price: BDT <span><%= cart.price %></span></h4>
+                                <label for="price">Number of Cakes:</label>
+                                <input type="number" name="quantity" class="form-control" id="quantity">
+                                <div class="action">
+                                    <button type="submit" class="btn btn-primary">Purchase</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </form>
+</div>
+</div>
+
+<%- include("./partials/footer") %>
