@@ -8,13 +8,12 @@ router.get('/', async (req, res) => {
         const products = await Product.find({});
         console.log(products);
 //        res.json(products);
-        res.render("viewProduct", {
+        res.render("adminProductView", {
             products: products});
 // price: products. 
     } catch (err) {
         res.json({message : err});
     };
-
 });
 
 // specific post

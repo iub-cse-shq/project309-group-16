@@ -33,6 +33,7 @@ const registerRoute = require('./routes/register');
 const logoutRoute = require('./routes/logout');
 const homeRoute = require('./routes/home');
 const cartRoute = require('./routes/cart');
+const adminProductViewRoute = require('./routes/adminProductView');
 
 app.use('/register', registerRoute);
 app.use('/posts', postsRoute);
@@ -43,6 +44,7 @@ app.use('/createProduct', createProductRoute);
 app.use('/logout', logoutRoute);
 app.use('/home', homeRoute);
 app.use('/cart', cartRoute);
+app.use('/adminProductView', adminProductViewRoute);
 
 //ROUTES
 app.get('/', (req,res) => {

@@ -1,13 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const authenticateUser = require("../middlewares/authenticateUser");
+const Product = require('../models/Product');
 
 
-router.get("/", authenticateUser, (req, res) => {
+router.get("/", authenticateUser, async (req, res) => {
     console.log(req.session.user.type);
     if (req.session.user.type == "customer") {
         console.log("reached user homepage");
-        res.render("home", { user: req.session.user });
+        try{
+            const products = await Product.find({});
+            console.log(products);
+            res.render("home", { user: req.session.user,products: products} );
+        }catch (err) {
+            res.json({message : err});
+        };
     }
 
     if (req.session.user.type == "admin") {
